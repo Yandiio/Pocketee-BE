@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('transaction', function (Blueprint $table) {
+        Schema::create('budget', function (Blueprint $table) {
             $table->id();
-            $table->integer("double");
-            $table->integer("id_category");
-            $table->integer("id_wallet");
-            $table->timestamp("date_added");
-            $table->string("notes");
-            $table->integer("created_by");
-            $table->integer("updated_by");
+            $table->string('name');
+            $table->integer('created_by');
+            $table->integer('updated_by');
             $table->timestamps();
         });
     }
@@ -33,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaction');
+        Schema::dropIfExists('budget');
     }
 };

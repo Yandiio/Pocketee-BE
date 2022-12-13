@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('transaction', function (Blueprint $table) {
+        Schema::create('history_log', function (Blueprint $table) {
             $table->id();
             $table->integer("double");
             $table->integer("id_category");
-            $table->integer("id_wallet");
+            $table->integer("id_transaction");
             $table->timestamp("date_added");
             $table->string("notes");
             $table->integer("created_by");
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaction');
+        Schema::dropIfExists('history_log');
     }
 };

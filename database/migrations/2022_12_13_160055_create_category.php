@@ -18,8 +18,8 @@ return new class extends Migration
             $table->integer("id_icon");
             $table->integer("id_cashflow");
             $table->string("category_name");
-            $table->string("created_by");
-            $table->string("updated_by");
+            $table->integer("created_by");
+            $table->integer("updated_by");
             $table->timestamps();
         });
     }

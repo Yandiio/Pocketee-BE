@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('icon_name');
             $table->string('icon_type');
+            $table->string('file');
             $table->integer('created_by');
             $table->integer('updated_by');
             $table->timestamps();

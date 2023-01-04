@@ -18,9 +18,9 @@ $router->get('/', function () use ($router) {
 });
 
 /**
- * 
+ *
  * Budget Route
- * 
+ *
  */
 $router->group(['prefix' => 'budget'], function() use ($router) {
     $router->post('/create', 'BudgetController@create');
@@ -28,12 +28,13 @@ $router->group(['prefix' => 'budget'], function() use ($router) {
 });
 
 /**
- * 
+ *
  * Wallet Route
- * 
+ *
  */
 $router->group(['prefix' => 'wallet'], function() use ($router) {
     $router->post('/create', 'WalletController@create');
     $router->get('/', 'WalletController@listWallet');
     $router->put('/update', 'WalletController@update');
+    $router->delete('/delete', 'WalletController@delete');
 });

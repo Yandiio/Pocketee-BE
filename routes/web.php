@@ -16,3 +16,24 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+/**
+ * 
+ * Budget Route
+ * 
+ */
+$router->group(['prefix' => 'budget'], function() use ($router) {
+    $router->post('/create', 'BudgetController@create');
+    $router->get('/', 'BudgetController@listBudget');
+});
+
+/**
+ * 
+ * Wallet Route
+ * 
+ */
+$router->group(['prefix' => 'wallet'], function() use ($router) {
+    $router->post('/create', 'WalletController@create');
+    $router->get('/', 'WalletController@listWallet');
+    $router->put('/update', 'WalletController@update');
+});

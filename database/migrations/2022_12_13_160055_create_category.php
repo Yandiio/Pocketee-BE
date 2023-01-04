@@ -15,11 +15,12 @@ return new class extends Migration
     {
         Schema::create('category', function (Blueprint $table) {
             $table->id();
-            $table->integer("id_icon");
-            $table->integer("id_cashflow");
-            $table->string("category_name");
-            $table->integer("created_by");
-            $table->integer("updated_by");
+            $table->integer('id_icon');
+            $table->integer('id_cashflow');
+            $table->string('category_name');
+            $table->integer('created_by');
+            $table->integer('updated_by');
+            $table->string('status');
             $table->timestamps();
         });
     }

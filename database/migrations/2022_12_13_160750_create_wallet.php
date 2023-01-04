@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('id_user');
             $table->integer('id_icon');
+            $table->string('wallet_type');
             $table->string('wallet_name');
             $table->string('status');
             $table->integer('created_by');
